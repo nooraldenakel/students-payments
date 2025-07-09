@@ -618,7 +618,7 @@ const StudentsPage: React.FC<StudentsPageProps> = ({
               <option value="room">ترتيب حسب الغرفة</option>
               <option value="floor">ترتيب حسب الطابق</option>
               <option value="amount">ترتيب حسب المبلغ</option>
-              <option value="amount">ترتيب حسب تاريخ الدفع</option>
+              <option value="lastPaymentDate">ترتيب حسب تاريخ الدفع</option>
             </select>
 
             <button
