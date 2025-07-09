@@ -190,23 +190,6 @@ const LoginPage: React.FC<LoginPageProps> = ({ onLogin }) => {
           </form>
 
           {/* Demo Credentials */}
-          <div className="mt-8 p-4 bg-gradient-to-r from-blue-50/80 to-indigo-50/80 dark:from-blue-900/30 dark:to-indigo-900/30 rounded-xl border border-blue-200/50 dark:border-blue-700/50 backdrop-blur-sm">
-            <div className="text-center">
-              <p className="text-sm font-bold text-blue-800 dark:text-blue-300 mb-3">
-                🔑 بيانات التجربة
-              </p>
-              <div className="space-y-2 text-sm text-blue-700 dark:text-blue-400">
-                <div className="flex justify-between items-center">
-                  <span className="font-semibold">اسم المستخدم:</span>
-                  <span className="bg-blue-100 dark:bg-blue-800 px-2 py-1 rounded font-mono">admin</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="font-semibold">كلمة المرور:</span>
-                  <span className="bg-blue-100 dark:bg-blue-800 px-2 py-1 rounded font-mono">123456</span>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
 
         {/* Footer */}
