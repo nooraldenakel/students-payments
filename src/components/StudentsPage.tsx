@@ -317,17 +317,12 @@ const StudentsPage: React.FC<StudentsPageProps> = ({
     <!-- نسخة الموظف -->
     <div class="header">
         <div class="title">إيصال دفع الطالب</div>
-        <div class="subtitle">نظام إدارة الطلاب</div>
     </div>
 
     <div class="receipt-info">
         <div class="row">
             <span class="label">رقم الإيصال:</span>
             <span class="value">${receiptNo}</span>
-        </div>
-        <div class="row">
-            <span class="label">رقم الدفعة:</span>
-            <span class="value">${payment.id.toUpperCase()}</span>
         </div>
     </div>
 
@@ -379,27 +374,16 @@ const StudentsPage: React.FC<StudentsPageProps> = ({
     <div class="amount-box">
         المبلغ المدفوع: ${payment.amount.toLocaleString()}
     </div>
-
-    <div class="footer">
-        <div><strong>نسخة الموظف</strong></div>
-        <div style="margin-top: 5px; font-size: 10px;">تم إنشاء الإيصال تلقائياً عند تأكيد الدفعة</div>
-    </div>
-
     <!-- نسخة الطالب -->
     <div class="copy-section">
         <div class="header">
             <div class="title">إيصال دفع الطالب</div>
-            <div class="subtitle">نظام إدارة الطلاب</div>
         </div>
 
         <div class="receipt-info">
             <div class="row">
                 <span class="label">رقم الإيصال:</span>
                 <span class="value">${receiptNo}</span>
-            </div>
-            <div class="row">
-                <span class="label">رقم الدفعة:</span>
-                <span class="value">${payment.id.toUpperCase()}</span>
             </div>
         </div>
 
@@ -450,11 +434,6 @@ const StudentsPage: React.FC<StudentsPageProps> = ({
 
         <div class="amount-box">
             المبلغ المدفوع: ${payment.amount.toLocaleString()}
-        </div>
-
-        <div class="footer">
-            <div><strong>نسخة الطالب</strong></div>
-            <div style="margin-top: 5px; font-size: 10px;">تم إنشاء الإيصال تلقائياً عند تأكيد الدفعة</div>
         </div>
     </div>
 </body>

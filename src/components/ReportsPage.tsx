@@ -153,12 +153,6 @@ const ReportsPage: React.FC<ReportsPageProps> = ({ students, onLogout }) => {
                 <Download className="h-5 w-5 ml-2" />
                 تصدير التقرير
               </button>
-              <button
-                onClick={onLogout}
-                className="px-6 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-all duration-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-xl"
-              >
-                تسجيل الخروج
-              </button>
             </div>
           </div>
         </div>
