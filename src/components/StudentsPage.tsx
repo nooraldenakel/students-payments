@@ -148,7 +148,18 @@ const StudentsPage: React.FC<StudentsPageProps> = ({
         case 'amount':
           aValue = a.payments.filter(p => p.confirmed).reduce((sum, p) => sum + p.amount, 0);
           bValue = b.payments.filter(p => p.confirmed).reduce((sum, p) => sum + p.amount, 0);
-          break;
+        break;
+        case 'lastPaymentDate':
+              { const aLastPayment = a.payments
+                  .filter(p => p.confirmed)
+                  .sort((x, y) => new Date(y.date).getTime() - new Date(x.date).getTime())[0];
+              const bLastPayment = b.payments
+                  .filter(p => p.confirmed)
+                  .sort((x, y) => new Date(y.date).getTime() - new Date(x.date).getTime())[0];
+
+              aValue = aLastPayment ? new Date(aLastPayment.date).getTime() : 0;
+              bValue = bLastPayment ? new Date(bLastPayment.date).getTime() : 0;
+              break; }
         default:
           aValue = a.name.toLowerCase();
           bValue = b.name.toLowerCase();
@@ -603,10 +614,11 @@ const StudentsPage: React.FC<StudentsPageProps> = ({
               className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-right bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-colors duration-300"
             >
               <option value="name">ترتيب حسب الاسم</option>
-              <option value="date">ترتيب حسب التاريخ</option>
+              <option value="date"> ترتيب حسب تاريخ الاضافة</option>
               <option value="room">ترتيب حسب الغرفة</option>
               <option value="floor">ترتيب حسب الطابق</option>
               <option value="amount">ترتيب حسب المبلغ</option>
+              <option value="amount">ترتيب حسب تاريخ الدفع</option>
             </select>
 
             <button

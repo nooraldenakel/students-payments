@@ -25,7 +25,7 @@ export interface User {
   password: string;
 }
 
-export type SortField = 'name' | 'date' | 'room' | 'floor' | 'amount';
+export type SortField = 'name' | 'date' | 'room' | 'floor' | 'amount' | 'lastPaymentDate';
 export type SortOrder = 'asc' | 'desc';
 
 export interface PaymentSummary {
